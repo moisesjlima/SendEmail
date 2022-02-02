@@ -1,2 +1,2 @@
 # SendEmail
-Código envio de email simples com C#
+Código de envio de email simples com C#
