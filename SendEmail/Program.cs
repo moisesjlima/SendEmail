@@ -25,7 +25,7 @@ namespace SendEmail
                 message.Subject = "Teste de envio de email"; //Titulo do email
                 message.Body = "<p>Enviado automaticamente!<p>"; //
                 message.IsBodyHtml = true;
-                client.Send(message); //Fazendo o envio do email passando a variavel instanciada da Clasee MailMessage
+                client.Send(message); //Fazendo o envio do email passando a variavel instanciada da Classe MailMessage
 
 
                 Console.WriteLine("Success!");
