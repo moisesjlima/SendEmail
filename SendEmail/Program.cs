@@ -1,6 +1,7 @@
-﻿using System;
-using System.Net.Mail;
-using System.Net.Mime;
+using System;
+                       //Docs referente as bibliotecas utilizadas
+using System.Net.Mail; //https://docs.microsoft.com/pt-br/dotnet/api/system.net.mail?view=net-6.0 
+using System.Net.Mime; //https://docs.microsoft.com/pt-br/dotnet/api/system.net.mime?view=net-6.0 
 
 namespace SendEmail
 {
