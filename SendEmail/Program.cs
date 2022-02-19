@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Net.Mail;
-//using System.Threading; //Usada para utilizar o Thread.Sleep(milissegundos), para dar um wait na execução especificando o tempo
+using System.Net.Mime;
 
 namespace SendEmail
 {
@@ -25,11 +25,13 @@ namespace SendEmail
                 message.Subject = "Teste de envio de email"; //Titulo do email
                 message.Body = "<p>Enviado automaticamente!<p>"; //
                 message.IsBodyHtml = true;
-                client.Send(message); //Fazendo o envio do email passando a variavel instanciada da Classe MailMessage
+                String file = "Caminho do arquivo a ser anexado"; 
+                Attachment fileEmail = new Attachment(file, MediaTypeNames.Application.Octet);
+                message.Attachments.Add(fileEmail);
+                client.Send(message); //Fazendo o envio do email passando a variavel instanciada da Clasee MailMessage
 
 
                 Console.WriteLine("Success!");
-                //Thread.Sleep(10000);
             }
             catch (Exception e)
             {
@@ -39,4 +41,3 @@ namespace SendEmail
 
     }
 }
-
