@@ -22,7 +22,7 @@ namespace SendEmail
                 client.Credentials = credential;
 
                 //Instanciando a Classe de mensagem do email
-                MailMessage message = new MailMessage("emailDeEnvio", "emailDeDestino");
+                MailMessage message = new MailMessage("remetente", "destinatario");
                 message.Subject = "Teste de envio de email"; //Titulo do email
                 message.Body = "<p>Enviado automaticamente!<p>"; //
                 message.IsBodyHtml = true;
@@ -30,8 +30,7 @@ namespace SendEmail
                 Attachment fileEmail = new Attachment(file, MediaTypeNames.Application.Octet);
                 message.Attachments.Add(fileEmail);
                 client.Send(message); //Fazendo o envio do email passando a variavel instanciada da Clasee MailMessage
-
-
+              
                 Console.WriteLine("Success!");
             }
             catch (Exception e)
@@ -39,6 +38,5 @@ namespace SendEmail
                 Console.WriteLine(e.Message);
             }
         }
-
     }
 }
